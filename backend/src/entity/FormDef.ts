@@ -22,6 +22,6 @@ export class FormDef {
     email: string
 
     @Column()
-    mobleNumber: number
+    mobileNumber: number
 
 }

@@ -11,12 +11,15 @@ export class FormController {
     }
 
     async save(request: Request, response: Response, next: NextFunction) {
-        const { firstName, lastName, age } = request.body;
+        const { companyUEN, companyName, fullName, positionHeld, email, mobileNumber } = request.body;
 
         const formData = Object.assign(new FormDef(), {
-            firstName,
-            lastName,
-            age
+            companyUEN,
+            companyName,
+            fullName,
+            positionHeld,
+            email,
+            mobileNumber
         })
 
         return this.formRepository.save(formData)
